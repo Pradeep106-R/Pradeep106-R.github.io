@@ -20,7 +20,7 @@
             padding: 20px;
             background-color: #3c4043;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            width: 250px;
+            width: 300px;
         }
 
         h2 {
@@ -74,6 +74,14 @@
         button:hover {
             background-color: #21a1f1;
         }
+
+        .operator {
+            background-color: #61dafb; /* Different color for operator buttons */
+        }
+
+        .operator:hover {
+            background-color: #ff7f00; /* Darker shade on hover */
+        }
     </style>
 </head>
 <body>
@@ -81,29 +89,30 @@
         <h2>Simple Calculator</h2> <!-- Title added here -->
         <textarea id="display" disabled></textarea>
         <div class="buttons">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="backspace()">←</button>
-            <button onclick="appendToDisplay('(')">(</button>
-            <button onclick="appendToDisplay(')')">)</button>
-            <button onclick="appendToDisplay('/')">/</button>
-            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="clearDisplay()" class="operator">C</button>
+            <button onclick="backspace()" class="operator">←</button>
+            <button onclick="appendToDisplay('(')" class="operator">(</button>
+            <button onclick="appendToDisplay(')')" class="operator">)</button>
             
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('%')">%</button>
-            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('/') " class="operator">/</button>
             
             <button onclick="appendToDisplay('4')">4</button>
             <button onclick="appendToDisplay('5')">5</button>
             <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('*')" class="operator">*</button>
             
             <button onclick="appendToDisplay('1')">1</button>
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')" class="operator">-</button>
+            
             <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="calculate()">=</button>
+            <button onclick="calculate()" class="operator">=</button>
+            <button onclick="appendToDisplay('%')" class="operator">%</button>
+            <button onclick="appendToDisplay('+')" class="operator">+</button>
         </div>
     </div>
     <script>
